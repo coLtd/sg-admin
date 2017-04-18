@@ -7,7 +7,6 @@ import Home from '@/views/Home.vue'
 import Main from '@/views/Main.vue'
 import Table from '@/views/nav1/Table.vue'
 import Form from '@/views/nav1/Form.vue'
-import user from '@/views/nav1/user.vue'
 import Page4 from '@/views/nav2/Page4.vue'
 import Page5 from '@/views/nav2/Page5.vue'
 import Page6 from '@/views/nav3/Page6.vue'
@@ -58,7 +57,7 @@ const Menu = [
       name: 'Form'
     }, {
       path: '/user',
-      component: user,
+      component: resolve => require(['@/views/nav1/user.vue'], resolve),
       name: '列表'
     }, ]
   }, {
